@@ -1,0 +1,6 @@
+Epoch:1	 Loss:0.324	 lr:0.00100	 acc1:93.270%	 acc5:99.380%
+Epoch:2	 Loss:0.334	 lr:0.00100	 acc1:93.350%	 acc5:99.390%
+Epoch:3	 Loss:0.322	 lr:0.00100	 acc1:93.460%	 acc5:99.470%
+Epoch:13	 Loss:0.330	 lr:0.00100	 acc1:93.470%	 acc5:99.470%
+Epoch:14	 Loss:0.322	 lr:0.00100	 acc1:93.520%	 acc5:99.550%
+Epoch:29	 Loss:0.328	 lr:0.00100	 acc1:93.570%	 acc5:99.510%

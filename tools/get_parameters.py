@@ -15,8 +15,9 @@ def get_args():
     parser.add_argument("-retrainlr", default=0.001, help='retrain learning rate', type=float)
     parser.add_argument("-trainflag", action='store_true', help='train or not', default=False)
     parser.add_argument("-pruneflag", action='store_true', help='prune or not', default=False)
+    parser.add_argument("-sortflag", action='store_true', help='sort filter by abs sum of weights or not', default=False)
     parser.add_argument("-independentflag", action='store_true', help='pruning strategy', default=False)
-    parser.add_argument("-shortcutflag", action='store_true', help='prune the shortcut', default=False)
+    parser.add_argument("-shortcutflag", action='store_true', help='prune the shortcut', default=True)
     parser.add_argument("-prune_channels",  nargs='+', type=int,
                         help='the number of channels to prune corresponding to the prune_layers')
     parser.add_argument("-prune_layers",  nargs='+', help='the layers to prune')

@@ -59,11 +59,48 @@ def prune_resnet(net, independentflag, prune_layers, prune_channels, shortcutfla
     # prune shortcut
     if shortcutflag:
         downsample_index = 1
-    # identify channels to remove
-    # prune this layer's filter in dim=0
-    # prune next layer's filter in dim=1
-    # prune bn
+        for layer_index in range(len(layers)):
+            for block_index in range(len(layers[layer_index])):
+                if last_prune_flag:
+                    # prune next block's filter in dim=1
+                    layers[layer_index][block_index].conv1, residue = get_new_conv(
+                        layers[layer_index][block_index].conv1, remove_channels, 1)
+
+                if layer_index >= 1 and block_index == 0:
+                    if last_prune_flag:
+                        # prune next downsample's filter in dim=1
+                        layers[layer_index][block_index].downsample[0], residue = get_new_conv(
+                            layers[layer_index][block_index].downsample[0], remove_channels, 1)
+                    else:
+                        residue = None
+                    if "downsample_%d" % downsample_index in prune_layers:
+                        # identify channels to remove
+                        remove_channels = channels_index(layers[layer_index][block_index].downsample[0].weight.data,
+                                                         prune_channels[arg_index], residue, independentflag)
+                        print(prune_layers[arg_index], remove_channels)
+                        # prune downsample's filter in dim=0
+                        layers[layer_index][block_index].downsample[0] = get_new_conv(layers[layer_index][block_index].
+                                                                                      downsample[0], remove_channels, 0)
+                        # prune downsample's bn
+                        layers[layer_index][block_index].downsample[1] = get_new_norm(layers[layer_index][block_index].
+                                                                                      downsample[1], remove_channels)
+                        arg_index += 1
+                        last_prune_flag = 1
+                    else:
+                        last_prune_flag = 0
+                    downsample_index += 1
+
+                if last_prune_flag:
+                    # prune next block's filter in dim=0
+                    layers[layer_index][block_index].conv2 = get_new_conv(layers[layer_index][block_index].conv2,
+                                                                          remove_channels, 0)
+                    # prune next block's bn
+                    layers[layer_index][block_index].bn2 = get_new_norm(layers[layer_index][block_index].bn2,
+                                                                        remove_channels)
     # prune linear
+    if "downsample_3" in prune_layers:
+        net.module.fc = get_new_linear(net.module.fc, remove_channels)
+
     # prune non-shortcut
     else:
         conv_index = 2
@@ -93,7 +130,7 @@ def prune_resnet(net, independentflag, prune_layers, prune_channels, shortcutfla
 
 def channels_index(weight_matrix, prune_num, residue, independentflag):
     abs_sum = torch.sum(torch.abs(weight_matrix.view(weight_matrix.size(0), -1)), dim=1)
-    if independentflag:
+    if independentflag and residue is not None:
         abs_sum = abs_sum + torch.sum(torch.abs(residue.view(residue.size(0), -1)), dim=1)
     _, indices = torch.sort(abs_sum)
     return indices[:prune_num].tolist()

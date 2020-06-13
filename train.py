@@ -47,10 +47,11 @@ def train_epoch(net, epoch, trainloader, loss_function, optimizer, fepoch, fstep
         correct_5 += correct[:5].view(-1).sum()
         # correct += (predict == y).sum()
 
-        if step % 30 == 0:
+        if step % 20 == 0:
             print("Epoch:{}\t Step:{}\t TrainedSample:{}\t TotalSample:{}\t Loss:{:.3f}".format(
                 epoch + 1, step + 1, step * batch_size + len(y), total_sample, loss.item()
             ))
+        if step % 40 == 0:
             fstep.write("Epoch:{}\t Step:{}\t TrainedSample:{}\t TotalSample:{}\t Loss:{:.3f}\n".format(
                 epoch + 1, step + 1, step * batch_size + len(y), total_sample, loss.item()
             ))
@@ -113,7 +114,9 @@ def training(net, total_epoch, trainloader, testloader, retrain, lr, optim, most
 
     # initial best_acc(for early stop) and total_time(for inference time)
     best_acc = 0
+    # best_acc = 0.72374
     total_time = 0
+    pre_epoch = 0
 
     if not os.path.exists(train_checkpoint_path):
         os.makedirs(train_checkpoint_path)
@@ -124,7 +127,7 @@ def training(net, total_epoch, trainloader, testloader, retrain, lr, optim, most
                 with open(os.path.join(train_checkpoint_path, 'Best.txt'), 'w') as fbest:
 
                     print("start training")
-                    for epoch in range(total_epoch):
+                    for epoch in range(pre_epoch, total_epoch):
                         train_epoch(net, epoch, trainloader, loss_function, optimizer, fepoch, fstep)
 
                         print("evaluating")
@@ -172,6 +175,10 @@ if __name__ == '__main__':
         from netModels.VGG import MyVgg16
         net = MyVgg16(10)
         print(net)
+    elif args.net == 'resnet34':
+        from netModels.ResNet34 import MyResNet34
+        net = MyResNet34()
+        print(net)
     else:
         print('We don\'t support this net.')
         sys.exit()
@@ -193,18 +200,18 @@ if __name__ == '__main__':
         training(net, args.e, train_loader, test_loader, False, args.lr, args.optim,
                  train_most_recent_path, train_checkpoint_path)
 
+    new_net = None
     if args.pruneflag:
         if not os.path.exists(prune_checkpoint_path):
             os.makedirs(prune_checkpoint_path)
-        net.load_state_dict(torch.load(os.path.join(train_most_recent_path, 'bestParam.pth')))
-        new_net = prune_net(net, args.independentflag, args.prune_layers, args.prune_channels)
-        top1, top5, loss, infer_time = eval_epoch(new_net, test_loader)
-        print("Eval after pruning:\t Loss:{:.3f}\t acc1:{:.3%}\t acc5:{:.3%}\t Inference time:{:.3%}\n"
-              .format(loss, top1, top5, infer_time/len(test_loader.dataset)))
+        if os.path.exists(os.path.join(train_most_recent_path, 'bestParam.pth')):
+            net.load_state_dict(torch.load(os.path.join(train_most_recent_path, 'bestParam.pth')))
+        new_net = prune_net(net, args.independentflag, args.prune_layers, args.prune_channels, args.net, args.
+                            shortcutflag)
 
-        f, p = get_flops_params(new_net.module.cpu())
-
+        f, p = get_flops_params(new_net.module.cpu(), args.net)
         new_net = new_net.cuda()
+
         with open(os.path.join(prune_checkpoint_path, 'flops_and_params'), 'w') as fp:
             fp.write("flops:{}\t params:{}\n".format(f, p))
             fp.flush()
@@ -213,16 +220,10 @@ if __name__ == '__main__':
         torch.save(new_net.state_dict(), os.path.join(prune_most_recent_path, 'prunedParam.pth'))
 
     if args.retrainflag:
+        # new_net.load_state_dict(torch.load(os.path.join(retrain_most_recent_path, 'regularParam.pth')))
+        # print("evaluating")
+        # top1, top5, loss, infer_time = eval_epoch(new_net, test_loader)
+        # print("Eval after pruning:\t Loss:{:.3f}\t acc1:{:.3%}\t acc5:{:.3%}\t Inference time:{:.3%}\n"
+        #       .format(loss, top1, top5, infer_time / len(test_loader.dataset)))
         training(net, args.retrainepoch, train_loader, test_loader, True, args.retrainlr, args.optim,
                  retrain_most_recent_path, retrain_checkpoint_path)
-
-
-
-
-
-
-
-
-
-
-

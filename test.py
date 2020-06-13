@@ -11,7 +11,8 @@ import itertools
 
 gen = (x for x in range(10))
 index = 5
-for x in gen
+for i in range(3, 5):
+    print(i)
 '''
 transform_train = transforms.Compose([
     transforms.RandomCrop(32, padding=4),

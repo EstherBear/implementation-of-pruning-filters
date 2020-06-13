@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="173f1a26-f8cf-40fc-9dab-7b20fd2c1f9d" name="Default Changelist" comment="" />
+    <list default="true" id="173f1a26-f8cf-40fc-9dab-7b20fd2c1f9d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/COPYING" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/data/ILSVRC2012_validation_ground_truth.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/data/meta.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/evaluation/VOCreadrecxml.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/evaluation/VOCreadxml.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/evaluation/VOCxml2struct.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/evaluation/compute_overlap.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/evaluation/demo.val.pred.det.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/evaluation/demo.val.pred.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/evaluation/demo_eval.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/evaluation/eval_flat.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/evaluation/eval_localization_flat.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/evaluation/get_class2node.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/evaluation/make_hash.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ILSVRC2012_devkit_t12/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/meta.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filteds_ranked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filters_ranked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filters_sens_top1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filters_sens_top5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenetfilters_ranked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prune.py" beforeDir="false" afterPath="$PROJECT_DIR$/prune.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruneAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/pruneAnalysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resnet34-333f7ec4.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resnet34_1_filters_ranked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resnet34_2_filters_ranked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resnet34_shortcut_1_filters_ranked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/retrained_top1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/retrained_top5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/flops_params.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/flops_params.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/get_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/get_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/get_parameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/get_parameters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/top1" beforeDir="false" afterPath="$PROJECT_DIR$/top1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/top5" beforeDir="false" afterPath="$PROJECT_DIR$/top5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,15 +49,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prune.py">
+        <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="758">
-              <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-2354">
+              <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -26,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/get_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+            <state relative-caret-position="-492">
+              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -38,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pruneAnalysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="128" column="47" selection-start-line="128" selection-start-column="47" selection-end-line="128" selection-end-column="47" />
+            <state relative-caret-position="383">
+              <caret line="331" column="28" lean-forward="true" selection-start-line="331" selection-start-column="28" selection-end-line="331" selection-end-column="28" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -48,20 +84,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/top1">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/tools/get_parameters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/get_parameters.py">
+        <entry file="file://$PROJECT_DIR$/prune.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="361">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>device</find>
+      <find>20</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,9 +115,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/prune.py" />
+        <option value="$PROJECT_DIR$/tools/flops_params.py" />
+        <option value="$PROJECT_DIR$/top1" />
+        <option value="$PROJECT_DIR$/top5" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/tools/get_data.py" />
         <option value="$PROJECT_DIR$/tools/get_parameters.py" />
-        <option value="$PROJECT_DIR$/prune.py" />
         <option value="$PROJECT_DIR$/pruneAnalysis.py" />
       </list>
     </option>
@@ -83,11 +134,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="109" />
-    <option name="y" value="40" />
-    <option name="width" value="1601" />
-    <option name="height" value="1097" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="949" />
+    <option name="y" value="-11" />
+    <option name="width" value="983" />
+    <option name="height" value="1103" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -95,7 +146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,11 +153,20 @@
               <item name="pruning" type="b2602c69:ProjectViewProjectNode" />
               <item name="pruning" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pruning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pruning" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -120,6 +179,56 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Python.test">
+    <configuration name="pruneAnalysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pruning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pruneAnalysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pruning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.pruneAnalysis" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -135,22 +244,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="27" width="1067" height="731" extended-state="1" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.029097963" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13820492" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.30550918" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4980143" weight="0.24875621" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019857" side_tool="true" weight="0.21393035" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -158,40 +267,87 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/top1_2" />
+    <entry file="file://$PROJECT_DIR$/top5_2" />
+    <entry file="file://$PROJECT_DIR$/top5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1464" selection-start-column="1464" selection-end-column="1464" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netModels/VGG.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netModels/ResNet34.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="319" selection-start-column="319" selection-end-column="319" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filters_sens_top1.png" />
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/flops_params.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prune.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tools/get_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        <state relative-caret-position="-492">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prune.py">
+    <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
-          <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-2354">
+          <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/get_parameters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/top1">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pruneAnalysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="128" column="47" selection-start-line="128" selection-start-column="47" selection-end-line="128" selection-end-column="47" />
+        <state relative-caret-position="383">
+          <caret line="331" column="28" lean-forward="true" selection-start-line="331" selection-start-column="28" selection-end-line="331" selection-end-column="28" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

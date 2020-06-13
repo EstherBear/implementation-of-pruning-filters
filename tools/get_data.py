@@ -19,7 +19,7 @@ def get_train_loader(args):
             transforms.Normalize(mean=CIFAR10_TRAIN_MEAN, std=CIFAR10_TRAIN_STD)
         ])
 
-        traindata = torchvision.datasets.CIFAR10(root='../../../share/jianheng/data', train=True, download=False, transform=transform_train)
+        traindata = torchvision.datasets.CIFAR10(root='./data', train=True, download=False, transform=transform_train)
         trainloader = DataLoader(traindata, batch_size=args.b, shuffle=True, num_workers=2)
         return trainloader
     elif args.dataset == 'imagenet':
@@ -30,7 +30,7 @@ def get_train_loader(args):
             transforms.Normalize(mean=ImageNet_TRAIN_MEAN, std=ImageNet_TRAIN_STD)
         ])
 
-        traindata = torchvision.datasets.ImageFolder(root='../../../share/jianheng/data/imagenet/train',
+        traindata = torchvision.datasets.ImageFolder(root='./data/imagenet/train',
                                                      transform=transform_train)
         trainloader = DataLoader(traindata, batch_size=args.b, shuffle=True, num_workers=2)
         return trainloader
@@ -43,7 +43,7 @@ def get_test_loader(args):
             transforms.Normalize(mean=CIFAR10_TRAIN_MEAN, std=CIFAR10_TRAIN_STD)
         ])
 
-        testdata = torchvision.datasets.CIFAR10(root='../../../share/jianheng/data', train=False, download=False, transform=transform_test)
+        testdata = torchvision.datasets.CIFAR10(root='./data', train=False, download=False, transform=transform_test)
         testloader = DataLoader(testdata, batch_size=args.b, shuffle=True, num_workers=2)
         return testloader
     elif args.dataset == 'imagenet':
@@ -54,7 +54,7 @@ def get_test_loader(args):
             transforms.Normalize(mean=ImageNet_TRAIN_MEAN, std=ImageNet_TRAIN_STD)
         ])
 
-        testdata = torchvision.datasets.ImageFolder(root='../../../share/jianheng/data/imagenet/val',
+        testdata = torchvision.datasets.ImageFolder(root='./data/imagenet/val',
                                                     transform=transform_test)
         testloader = DataLoader(testdata, batch_size=args.b, shuffle=True, num_workers=2)
         return testloader

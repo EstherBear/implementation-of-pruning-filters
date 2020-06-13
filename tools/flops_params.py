@@ -20,5 +20,5 @@ def get_flops_params(net, net_name):
     # summary(net.cuda(), (3, 32, 32))
 
 
-net = MyResNet34()
-f, p = get_flops_params(net, "resnet34")
+# net = MyResNet34()
+# f, p = get_flops_params(net, "resnet34")

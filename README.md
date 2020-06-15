@@ -30,7 +30,7 @@ python train.py -pruneflag -retrainflag -prune_layers conv_4 conv_6 conv_10 conv
 python pruneAnalysis.py -pruneflag
 ```
 
-### Analysis on pruning the the smallest filters (shorcut) in ResNet-34
+### Analysis on pruning the the smallest filters (shortcut) in ResNet-34
 ```
 python pruneAnalysis.py -pruneflag -shortcutflag
 ```

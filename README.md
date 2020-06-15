@@ -50,8 +50,8 @@ model | params | FLOPs | best_top1 | best_top5 | inference time(ms)
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------
 VGG-16 pretrained on CIFAR10 | 14.992M | 314.562M  | 93.630% | 99.670% | 0.12387054112005236
 ResNet-34 (pretrained model on pytorch) | 21.798M | 3.672G  | 73.314% | 91.420% | 0.753
-VGG-16-pruned-A on cifar10  | 5.400M | 207.102M  | 93.570% | 99.550% | 0.11985054855585098
-ResNet-34 on ImageNet | 19.488M | 2.793G  | 72.374% | 90.974% | 0.6542
+VGG-16-pruned-A on CIFAR10  | 5.400M | 207.102M  | 93.570% | 99.550% | 0.11985054855585098
+ResNet-34-pruned-B on ImageNet | 19.488M | 2.793G  | 72.374% | 90.974% | 0.6542
 ### VGG-16 ON CIFAR-10：
 - filters ranked by abs sum of weights:  
 ![figure1](./graph/filters_ranked.png)
